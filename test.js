@@ -5,7 +5,29 @@
 let date=document.querySelector("#myClock")
 let time;
 time=new Date();
-date.innerHTML = time.toDateString();
+let gün=time.getDay()
+if(gün==0){
+    gün="Pazar"
+}
+if(gün==1){
+    gün="Pazartesi"
+}
+if(gün==2){
+    gün="Salı"
+}
+if(gün==3){
+    gün="Çarşamba"
+}
+if(gün==4){
+    gün="Perşembe"
+}
+if(gün==5){
+    gün="Cuma"
+}
+if(gün==6){
+    gün="Cumartesi"
+}
+date.innerHTML =` ${ gün} günü , ${time.toLocaleDateString("tr-TR")}` 
 
 function Clock(){
     let zaman=new Date();
@@ -27,7 +49,7 @@ dakika=dakika<10?"0"+dakika:dakika
 saniye=saniye<10?"0"+saniye:saniye
 
 
-  text=` ${saat} : ${dakika} :  ${saniye}   ${session}`
+  text=`${saat} : ${dakika} :  ${saniye}   ${session}`
     document.querySelector("#zaman").innerText=text;     
     let t=setTimeout(Clock,1000)
 }
