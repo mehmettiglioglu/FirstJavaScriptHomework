@@ -1,6 +1,6 @@
-// let username=prompt("Lütfen isminizi giriniz")
-// let usernameDOM=document.querySelector("#myName")
-// usernameDOM.innerHTML=username
+let username=prompt("Lütfen isminizi giriniz")
+let usernameDOM=document.querySelector("#myName")
+usernameDOM.innerHTML=username
 
 let date=document.querySelector("#myClock")
 let time;
